@@ -33,6 +33,9 @@ while (difficulties.ContainsKey(difficulty) == false)
     difficulty = Console.ReadLine().ToUpper();
 }
 
+int a = 0;
+int b = 0;
+bool playing = true;
 
 
 

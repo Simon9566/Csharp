@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "G:\\VS\\repo\\Math_game\\Math_game\\Math_game.csproj": {}
+    "G:\\VS\\repo\\Math_game\\Math_game\\Math_game\\Math_game.csproj": {}
   },
   "projects": {
-    "G:\\VS\\repo\\Math_game\\Math_game\\Math_game.csproj": {
+    "G:\\VS\\repo\\Math_game\\Math_game\\Math_game\\Math_game.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "G:\\VS\\repo\\Math_game\\Math_game\\Math_game.csproj",
+        "projectUniqueName": "G:\\VS\\repo\\Math_game\\Math_game\\Math_game\\Math_game.csproj",
         "projectName": "Math_game",
-        "projectPath": "G:\\VS\\repo\\Math_game\\Math_game\\Math_game.csproj",
+        "projectPath": "G:\\VS\\repo\\Math_game\\Math_game\\Math_game\\Math_game.csproj",
         "packagesPath": "C:\\Users\\Szymon\\.nuget\\packages\\",
-        "outputPath": "G:\\VS\\repo\\Math_game\\Math_game\\obj\\",
+        "outputPath": "G:\\VS\\repo\\Math_game\\Math_game\\Math_game\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\Szymon\\AppData\\Roaming\\NuGet\\NuGet.Config",
