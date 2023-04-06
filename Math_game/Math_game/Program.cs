@@ -1,4 +1,4 @@
-﻿// Start of the program, get the player name, current date and clear the console to allow for the main loop
+// Start of the program, get the player name, current date and clear the console to allow for the main loop
 
 Console.WriteLine("Please enter your name");
 string player_name = Console.ReadLine();
@@ -18,12 +18,12 @@ Console.ForegroundColor = ConsoleColor.DarkYellow;
 Console.WriteLine("H - Hard, addition subtraction and multiplication");
 Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine("S- Superb,  addition has been replaced with division, all results are to be given with 2 decimal spaces, even if those are zeroes :)");
-Console.ForegroundColor = ConsoleColor.White;
+Console.ResetColor();
 
 // Getting the difficulty and constructing main play loops based on them
 
 string difficulty = "tmp";
-var difficulties= new Dictionary<string, string>();
+var difficulties = new Dictionary<string, string>();
 difficulties.Add("E", "easy");
 difficulties.Add("M", "medium");
 difficulties.Add("H", "hard");
@@ -33,37 +33,87 @@ while (difficulties.ContainsKey(difficulty) == false)
     difficulty = Console.ReadLine().ToUpper();
 }
 
-Random random =  new Random();
-
 int a = 0;
 int b = 0;
 bool playing = true;
 int guess = 0;
 int points = 0;
 
-while(playing)
-    {
-        a = Random.Next(100, 999);
-        b = Random.Next(100, 999);
-        if (difficulties[difficulty] == "easy")
-        {
-                
-                Console.WriteLine($"What is {a} + {b}?");
-                guess = Convert.ToInt32( Console.ReadLine() );
-                if (guess == a + b)
-                {
-                    Console.WriteLine("You are correct");
-                    points++;
-                }
-                else
-                {
-                    Console.WriteLine($"Unfortunately the correct answer was {a + b}");
-                }
-        Console.WriteLine("If you want to stop enter \"N\"");
-        string choice = Console.ReadLine().ToUpper();
-        if (choice == "N")
-            playing = false;
-        }
-//        else if
-     }
+Random random = new Random();
 
+public void Ask_continue()
+{
+    Console.WriteLine("If you want to stop enter \"N\"");
+    string choice = Console.ReadLine().ToUpper();
+    if (choice == "N")
+        playing = false;
+}
+
+public void Ask_addition()
+{
+    Console.WriteLine($"What is {a} + {b}?");
+    guess = Convert.ToInt32(Console.ReadLine());
+    if (guess == a + b)
+    {
+        Console.WriteLine("You are correct");
+        points++;
+    }
+    else
+    {
+        Console.WriteLine($"Unfortunately the correct answer was {a + b}");
+    }
+    Ask_continue();
+}
+
+public void Ask_subtraction()
+{
+    while (a < b)
+    {
+        a = random.Next(100, 999);
+        b = random.Next(100, 999);
+    }
+
+    {
+        Console.WriteLine($"What is {a} - {b}?");
+        guess = Convert.ToInt32(Console.ReadLine());
+        if (guess == a - b)
+        {
+            Console.WriteLine("You are correct");
+            points++;
+        }
+        else
+        {
+            Console.WriteLine($"Unfortunately the correct answer was {a - b}");
+        }
+        Ask_continue();
+    }
+}
+while (playing)
+{
+    a = random.Next(100, 999);
+    b = random.Next(100, 999);
+    if (difficulties[difficulty] == "easy")
+    {
+        Ask_addition();
+    }
+    else if (difficulties[difficulty] == "medium")
+    {
+        int operation = random.Next(1, 3)
+        if (operation == 1)
+        {
+            Ask_addition();
+        }
+        else
+        {
+            Ask_subtraction();
+        }
+    }
+    else if (difficulties[difficulty] == "hard")
+    {
+
+    }
+    else
+    {
+
+    }
+}
