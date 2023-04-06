@@ -25,7 +25,7 @@ Console.ForegroundColor = ConsoleColor.Black;
 string difficulty = "tmp";
 var difficulties= new Dictionary<string, string>();
 difficulties.Add("E", "easy");
-difficulties.Add("M,", "medium");
+difficulties.Add("M", "medium");
 difficulties.Add("H", "hard");
 difficulties.Add("S", "special");
 while (difficulties.ContainsKey(difficulty) == false)
@@ -33,9 +33,32 @@ while (difficulties.ContainsKey(difficulty) == false)
     difficulty = Console.ReadLine().ToUpper();
 }
 
+Random random =  new Random();
+
 int a = 0;
 int b = 0;
 bool playing = true;
+int guess = 0;
+int points = 0;
 
-
+while(playing)
+    {
+        a = Random.Next(100, 999);
+        b = Random.Next(100, 999);
+        if (difficulties[difficulty] == "easy")
+        {
+                Console.WriteLine($"What is {a} + {b}?");
+                guess = Convert.ToInt32( Console.ReadLine() );
+                if (guess == a + b)
+                {
+                    Console.WriteLine("You are correct");
+                    points++;
+                }
+                else
+                {
+                    Console.WriteLine($"Unfortunately the correct answer was {a + b}");
+                }
+        }
+        else if
+     }
 
