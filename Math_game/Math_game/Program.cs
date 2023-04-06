@@ -38,6 +38,8 @@ int b = 0;
 bool playing = true;
 int guess = 0;
 int points = 0;
+double div_guess = 0;
+double div_result = 0;
 
 Random random = new Random();
 
@@ -88,10 +90,54 @@ public void Ask_subtraction()
         Ask_continue();
     }
 }
-while (playing)
+
+public void Ask_multiplication()
 {
-    a = random.Next(100, 999);
-    b = random.Next(100, 999);
+        a = random.Next(11, 99);
+        b = random.Next(101, 99);
+    {
+        Console.WriteLine($"What is {a} * {b}?");
+        guess = Convert.ToInt32(Console.ReadLine());
+        if (guess == a * b)
+        {
+            Console.WriteLine("You are correct");
+            points++;
+        }
+        else
+        {
+            Console.WriteLine($"Unfortunately the correct answer was {a * b}");
+        }
+        Ask_continue();
+    }
+}
+
+public void Ask_division()
+{
+    while (a <  b)
+    {
+        a = random.Next(100, 999);
+        b = random.Next(100, 999);
+    }
+
+    {
+        div_result = a / b;
+        Console.WriteLine($"What is {a} / {b}?");
+        div_guess = Convert.ToDouble(Console.ReadLine());
+        if (guess == div_result)
+        {
+            Console.WriteLine("You are correct");
+            points++;
+        }
+        else
+        {
+            Console.WriteLine($"Unfortunately the correct answer was {div_result}");
+        }
+        Ask_continue();
+    }
+}
+
+while (playing)
+{ 
     if (difficulties[difficulty] == "easy")
     {
         Ask_addition();
@@ -110,10 +156,34 @@ while (playing)
     }
     else if (difficulties[difficulty] == "hard")
     {
-
+        int operation = random.Next(1, 4);
+        if (operation == 1) 
+        {
+            Ask_addition
+        }
+        else if (operation == 2)
+        {
+            Ask_subtraction();
+        }
+        else
+        {
+            Ask_multiplication();
+        }
     }
     else
     {
-
+        int operation = random.Next(1, 4);
+        if (operation == 1)
+        {
+            Ask_division();
+        }
+        else if (operation == 2)
+        {
+            Ask_subtraction();
+        }
+        else
+        {
+            Ask_multiplication();
+        }
     }
 }
