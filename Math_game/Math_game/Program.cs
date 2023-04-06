@@ -18,7 +18,7 @@ Console.ForegroundColor = ConsoleColor.DarkYellow;
 Console.WriteLine("H - Hard, addition subtraction and multiplication");
 Console.ForegroundColor = ConsoleColor.Red;
 Console.WriteLine("S- Superb,  addition has been replaced with division, all results are to be given with 2 decimal spaces, even if those are zeroes :)");
-Console.ForegroundColor = ConsoleColor.Black;
+Console.ForegroundColor = ConsoleColor.White;
 
 // Getting the difficulty and constructing main play loops based on them
 
@@ -47,6 +47,7 @@ while(playing)
         b = Random.Next(100, 999);
         if (difficulties[difficulty] == "easy")
         {
+                
                 Console.WriteLine($"What is {a} + {b}?");
                 guess = Convert.ToInt32( Console.ReadLine() );
                 if (guess == a + b)
@@ -58,7 +59,11 @@ while(playing)
                 {
                     Console.WriteLine($"Unfortunately the correct answer was {a + b}");
                 }
+        Console.WriteLine("If you want to stop enter \"N\"");
+        string choice = Console.ReadLine().ToUpper();
+        if (choice == "N")
+            playing = false;
         }
-        else if
+//        else if
      }
 
