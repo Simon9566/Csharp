@@ -43,7 +43,7 @@ double div_result = 0;
 
 Random random = new Random();
 
-public void Ask_continue()
+void Ask_continue()
 {
     Console.WriteLine("If you want to stop enter \"N\"");
     string choice = Console.ReadLine().ToUpper();
@@ -51,7 +51,7 @@ public void Ask_continue()
         playing = false;
 }
 
-public void Ask_addition()
+void Ask_addition()
 {
     Console.WriteLine($"What is {a} + {b}?");
     guess = Convert.ToInt32(Console.ReadLine());
@@ -66,7 +66,7 @@ public void Ask_addition()
     }
 }
 
-public void Ask_subtraction()
+void Ask_subtraction()
 {
     while (a < b)
     {
@@ -89,7 +89,7 @@ public void Ask_subtraction()
     }
 }
 
-public void Ask_multiplication()
+void Ask_multiplication()
 {
         a = random.Next(11, 99);
         b = random.Next(101, 99);
@@ -108,7 +108,7 @@ public void Ask_multiplication()
     }
 }
 
-public void Ask_division()
+void Ask_division()
 {
     while (a <  b)
     {
@@ -120,7 +120,7 @@ public void Ask_division()
         div_result = a / b;
         Console.WriteLine($"What is {a} / {b}?");
         div_guess = Convert.ToDouble(Console.ReadLine());
-        if (guess == div_result)
+        if (div_guess == div_result)
         {
             Console.WriteLine("You are correct");
             points++;
@@ -135,21 +135,32 @@ public void Ask_division()
 while (playing)
 {
     if (difficulties[difficulty] == "easy")
-        for (int i = 0; i < 10; i++)
-        {
-                Ask_addition();
-        }
-    Ask_continue();
-    else if (difficulties[difficulty] == "medium")
     {
-        int operation = random.Next(1, 3)
-        if (operation == 1)
+        int operation = random.Next(1, 2);
+        for (int i = 0; i < 10; i++)
         {
             Ask_addition();
         }
+        Ask_continue();
+    }
+    else if (difficulties[difficulty] == "medium")
+    {
+        int operation = random.Next(1, 3);
+        if (operation == 1)
+        {
+            for (int i = 0; i < 10; i++)
+            {
+                Ask_addition();
+            }
+            Ask_continue();
+        }
         else
         {
-            Ask_subtraction();
+            for (int i = 0; i < 10; i++)
+            {
+                Ask_subtraction();
+            }
+            Ask_continue();
         }
     }
     else if (difficulties[difficulty] == "hard")
@@ -157,15 +168,27 @@ while (playing)
         int operation = random.Next(1, 4);
         if (operation == 1)
         {
-            Ask_addition
+            for (int i = 0; i < 10; i++)
+            {
+                Ask_addition();
+            }
+            Ask_continue();
         }
         else if (operation == 2)
         {
-            Ask_subtraction();
+            for (int i = 0; i < 10; i++)
+            {
+                Ask_subtraction();
+            }
+            Ask_continue();
         }
         else
         {
-            Ask_multiplication();
+            for (int i = 0; i < 10; i++)
+            {
+                Ask_multiplication();
+            }
+            Ask_continue();
         }
     }
     else
@@ -173,15 +196,27 @@ while (playing)
         int operation = random.Next(1, 4);
         if (operation == 1)
         {
-            Ask_division();
+            for (int i = 0; i < 10; i++)
+            {
+                Ask_division();
+            }
         }
+        Ask_continue();
         else if (operation == 2)
         {
-            Ask_subtraction();
+            for (int i = 0; i < 10; i++)
+            {
+                Ask_subtraction();
+            }
         }
+        Ask_continue();
         else
         {
-            Ask_multiplication();
+            for (int i = 0; i < 10; i++)
+            {
+                Ask_multiplication();
+            }
+            Ask_continue();
         }
     }
 }
