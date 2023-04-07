@@ -55,6 +55,8 @@ void Ask_continue()
 
 void Ask_addition()
 {
+    a = random.Next(100, 999);
+    b = random.Next(100, 999);
     Console.WriteLine($"What is {a} + {b}?");
     guess = Convert.ToInt32(Console.ReadLine());
     if (guess == a + b)
