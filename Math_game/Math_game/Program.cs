@@ -48,7 +48,9 @@ void Ask_continue()
     Console.WriteLine("If you want to stop enter \"N\"");
     string choice = Console.ReadLine().ToUpper();
     if (choice == "N")
+    {
         playing = false;
+    }
 }
 
 void Ask_addition()
@@ -200,16 +202,16 @@ while (playing)
             {
                 Ask_division();
             }
+            Ask_continue();
         }
-        Ask_continue();
         else if (operation == 2)
         {
             for (int i = 0; i < 10; i++)
             {
                 Ask_subtraction();
             }
+            Ask_continue();
         }
-        Ask_continue();
         else
         {
             for (int i = 0; i < 10; i++)
