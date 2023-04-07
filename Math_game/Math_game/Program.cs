@@ -64,7 +64,6 @@ public void Ask_addition()
     {
         Console.WriteLine($"Unfortunately the correct answer was {a + b}");
     }
-    Ask_continue();
 }
 
 public void Ask_subtraction()
@@ -87,7 +86,6 @@ public void Ask_subtraction()
         {
             Console.WriteLine($"Unfortunately the correct answer was {a - b}");
         }
-        Ask_continue();
     }
 }
 
@@ -107,7 +105,6 @@ public void Ask_multiplication()
         {
             Console.WriteLine($"Unfortunately the correct answer was {a * b}");
         }
-        Ask_continue();
     }
 }
 
@@ -132,16 +129,17 @@ public void Ask_division()
         {
             Console.WriteLine($"Unfortunately the correct answer was {div_result}");
         }
-        Ask_continue();
     }
 }
 
 while (playing)
-{ 
+{
     if (difficulties[difficulty] == "easy")
-    {
-        Ask_addition();
-    }
+        for (int i = 0; i < 10; i++)
+        {
+                Ask_addition();
+        }
+    Ask_continue();
     else if (difficulties[difficulty] == "medium")
     {
         int operation = random.Next(1, 3)
@@ -157,7 +155,7 @@ while (playing)
     else if (difficulties[difficulty] == "hard")
     {
         int operation = random.Next(1, 4);
-        if (operation == 1) 
+        if (operation == 1)
         {
             Ask_addition
         }
