@@ -1,0 +1,15 @@
+G:\VS\repo\Calculator\Calcualtor_simple\bin\Debug\net6.0\Calcualtor_simple.exe
+G:\VS\repo\Calculator\Calcualtor_simple\bin\Debug\net6.0\Calcualtor_simple.deps.json
+G:\VS\repo\Calculator\Calcualtor_simple\bin\Debug\net6.0\Calcualtor_simple.runtimeconfig.json
+G:\VS\repo\Calculator\Calcualtor_simple\bin\Debug\net6.0\Calcualtor_simple.dll
+G:\VS\repo\Calculator\Calcualtor_simple\bin\Debug\net6.0\Calcualtor_simple.pdb
+G:\VS\repo\Calculator\Calcualtor_simple\obj\Debug\net6.0\Calcualtor_simple.csproj.AssemblyReference.cache
+G:\VS\repo\Calculator\Calcualtor_simple\obj\Debug\net6.0\Calcualtor_simple.GeneratedMSBuildEditorConfig.editorconfig
+G:\VS\repo\Calculator\Calcualtor_simple\obj\Debug\net6.0\Calcualtor_simple.AssemblyInfoInputs.cache
+G:\VS\repo\Calculator\Calcualtor_simple\obj\Debug\net6.0\Calcualtor_simple.AssemblyInfo.cs
+G:\VS\repo\Calculator\Calcualtor_simple\obj\Debug\net6.0\Calcualtor_simple.csproj.CoreCompileInputs.cache
+G:\VS\repo\Calculator\Calcualtor_simple\obj\Debug\net6.0\Calcualtor_simple.dll
+G:\VS\repo\Calculator\Calcualtor_simple\obj\Debug\net6.0\refint\Calcualtor_simple.dll
+G:\VS\repo\Calculator\Calcualtor_simple\obj\Debug\net6.0\Calcualtor_simple.pdb
+G:\VS\repo\Calculator\Calcualtor_simple\obj\Debug\net6.0\Calcualtor_simple.genruntimeconfig.cache
+G:\VS\repo\Calculator\Calcualtor_simple\obj\Debug\net6.0\ref\Calcualtor_simple.dll

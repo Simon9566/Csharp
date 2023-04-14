@@ -1,0 +1,23 @@
+{
+  "runtimeTarget": {
+    "name": ".NETCoreApp,Version=v6.0",
+    "signature": ""
+  },
+  "compilationOptions": {},
+  "targets": {
+    ".NETCoreApp,Version=v6.0": {
+      "Calcualtor_simple/1.0.0": {
+        "runtime": {
+          "Calcualtor_simple.dll": {}
+        }
+      }
+    }
+  },
+  "libraries": {
+    "Calcualtor_simple/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    }
+  }
+}
